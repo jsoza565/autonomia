@@ -1,0 +1,2678 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>La autonomía de las mujeres</title>
+	<!--<link rel="stylesheet" href="dist/reset.css">-->
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/simple.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<!--<link rel="stylesheet" href="plugin/highlight/monokai.css">-->
+
+	<script type="text/javascript" src="dist/jsc/jscharting.js"></script>
+	<script type="text/javascript" src="dist/jsc/modules/types.js"></script>
+
+	<script src="dist/highcharts.js"></script>
+	<script src="dist/highcharts-more.js"></script>
+	<script src="dist/accessibility.js"></script>
+
+	<style>
+		.navigate-left:hover::before {
+			content: "sección anterior";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateX(-100%);
+			background-color: rgba(0, 0, 0, 0.7);
+			color: #fff;
+			padding: 5px 10px;
+			border-radius: 5px;
+			font-size: 14px;
+		}
+
+		.navigate-right:hover::before {
+			content: "Siguiente sección";
+			position: absolute;
+			top: 50%;
+			right: 0;
+			background-color: rgba(0, 0, 0, 0.7);
+			color: #fff;
+			padding: 5px 10px;
+			border-radius: 5px;
+			font-size: 14px;
+		}
+
+		.navigate-down:hover::before {
+			content: "Siguiente gráfica";
+			position: absolute;
+			top: 50%;
+			right: 0;
+			background-color: rgba(0, 0, 0, 0.7);
+			color: #fff;
+			padding: 5px 10px;
+			border-radius: 5px;
+			font-size: 14px;
+		}
+
+		.navigate-up:hover::before {
+			content: "gráfica anteroir";
+			position: absolute;
+			top: 50%;
+			right: 0;
+			background-color: rgba(0, 0, 0, 0.7);
+			color: #fff;
+			padding: 5px 10px;
+			border-radius: 5px;
+			font-size: 14px;
+		}
+
+		.reveal .slides section {
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			height: 100vh;
+		}
+
+		/* Adjust background image size for smaller screens */
+		@media (max-width: 768px) {
+			.reveal .slides section {
+				background-size: contain;
+				background-position: top;
+				background-repeat: no-repeat;
+			}
+		}
+
+		#chartDiv {
+			width: 1000px !important;
+			height: 600px !important;
+		}
+
+
+		.topleft {
+			position: absolute;
+			top: 8px;
+			left: 16px;
+			font-size: 18px;
+		}
+
+		.parent {
+			position: relative;
+			width: 5%;
+		}
+
+		.contents {
+			position: fixed;
+			top: 00%;
+			left: 0%;
+		}
+
+		.reveal .slide-background-content {
+			background-size: contain;
+		}
+
+		.button {
+			display: inline-block;
+			padding: 10px 20px;
+			background-color: #3498db;
+			color: #fff;
+			font-size: 16px;
+			border: none;
+			border-radius: 5px;
+			text-align: center;
+			text-decoration: none;
+			cursor: pointer;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			transition: background-color 0.3s, transform 0.2s;
+		}
+
+		/* Cambio de color al pasar el cursor sobre el botón */
+		.button:hover {
+			background-color: #2980b9;
+		}
+
+		/* Efecto de presionar el botón */
+		.button:active {
+			transform: scale(0.95);
+		}
+
+		/* Estilo adicional si es necesario */
+		.button.secondary {
+			background-color: #e74c3c;
+		}
+
+		.button.secondary:hover {
+			background-color: #c0392b;
+		}
+
+		.uno {
+			position: absolute;
+			top: 450px;
+			left: 184px;
+			transform: translate(-50%, -50%);
+		}
+		.dos {
+			position: absolute;
+			top: 210px;
+			left: 670px;
+			transform: translate(-50%, -50%);
+		}
+		.nuevedosuno {
+			position: absolute;
+			top: 305px;
+			left: 790px;
+			transform: translate(-50%, -50%);
+		}
+		.nuevedosdos {
+			position: absolute;
+			top: 445px;
+			left: 762px;
+			transform: translate(-50%, -50%);
+		}
+		.tres {
+			position: absolute;
+			top: 480px;
+			left: 325px;
+			transform: translate(-50%, -50%);
+		}
+		.dostresuno {
+			position: absolute;
+			top: 300px;
+			left: 380px;
+			transform: translate(-50%, -50%);
+		}
+		.dostresdos {
+			position: absolute;
+			top: 460px;
+			left: 350px;
+			transform: translate(-50%, -50%);
+		}
+		.dostrestres {
+			position: absolute;
+			top: 375px;
+			left: 690px;
+			transform: translate(-50%, -50%);
+		}
+		.dostrescuatro {
+			position: absolute;
+			top: 440px;
+			left: 700px;
+			transform: translate(-50%, -50%);
+		}
+		.trestresuno {
+			position: absolute;
+			top: 330px;
+			left: 820px;
+			transform: translate(-50%, -50%);
+		}
+		.trestresdos {
+			position: absolute;
+			top: 465px;
+			left: 830px;
+			transform: translate(-50%, -50%);
+		}
+		.sietetres {
+			position: absolute;
+			top: 470px;
+			left: 510px;
+			transform: translate(-50%, -50%);
+		}
+		.cuatro {
+			position: absolute;
+			top: 250px;
+			left: 170px;
+			transform: translate(-50%, -50%);
+		}
+		.cinco {
+			position: absolute;
+			top: 530px;
+			left: 320px;
+			transform: translate(-50%, -50%);
+		}
+		.oncecincouno {
+			position: absolute;
+			top: 240px;
+			left: 790px;
+			transform: translate(-50%, -50%);
+		}
+		.oncecincodos {
+			position: absolute;
+			top: 305px;
+			left: 780px;
+			transform: translate(-50%, -50%);
+		}
+		.oncecincotres {
+			position: absolute;
+			top: 570px;
+			left: 300px;
+			transform: translate(-50%, -50%);
+		}
+		.oncecincocuatro {
+			position: absolute;
+			top: 570px;
+			left: 560px;
+			transform: translate(-50%, -50%);
+		}
+		.oncecincocinco {
+			position: absolute;
+			top: 570px;
+			left: 810px;
+			transform: translate(-50%, -50%);
+		}
+		.cuatrocinco {
+			position: absolute;
+			top: 360px;
+			left: 290px;
+			transform: translate(-50%, -50%);
+		}
+		
+		.seis {
+			position: absolute;
+			top: 535px;
+			left: 835px;
+			transform: translate(-50%, -50%);
+		}
+		.siete {
+			position: absolute;
+			top: 340px;
+			left: 720px;
+			transform: translate(-50%, -50%);
+		}
+		.ocho {
+			position: absolute;
+			top: 340px;
+			left: 720px;
+			transform: translate(-50%, -50%);
+		}
+		.quinceochouno {
+			position: absolute;
+			top: 510px;
+			left: 180px;
+			transform: translate(-50%, -50%);
+		}
+		.quinceochodos {
+			position: absolute;
+			top: 520px;
+			left: 790px;
+			transform: translate(-50%, -50%);
+		}
+		.nueve {
+			position: absolute;
+			top: 340px;
+			left: 720px;
+			transform: translate(-50%, -50%);
+		}
+		.diez {
+			position: absolute;
+			top: 295px;
+			left: 490px;
+			transform: translate(-50%, -50%);
+		}
+		.onceuno {
+			position: absolute;
+			top: 410px;
+			left: 300px;
+			transform: translate(-50%, -50%);
+		}
+		.oncedos {
+			position: absolute;
+			top: 500px;
+			left: 760px;
+			transform: translate(-50%, -50%);
+		}
+		.doce {
+			position: absolute;
+			top: 550px;
+			left: 810px;
+			transform: translate(-50%, -50%);
+		}
+		.trece {
+			position: absolute;
+			top: 340px;
+			left: 720px;
+			transform: translate(-50%, -50%);
+		}
+		.dieztreceuno {
+			position: absolute;
+			top: 192px;
+			left: 740px;
+			transform: translate(-50%, -50%);
+		}
+		.dieztrecedos {
+			position: absolute;
+			top: 232px;
+			left: 740px;
+			transform: translate(-50%, -50%);
+		}
+		.catorce {
+			position: absolute;
+			top: 340px;
+			left: 720px;
+			transform: translate(-50%, -50%);
+		}
+		.docecatorceuno {
+			position: absolute;
+			top: 320px;
+			left: 720px;
+			transform: translate(-50%, -50%);
+		}
+		.docecatorcedos {
+			position: absolute;
+			top: 510px;
+			left: 720px;
+			transform: translate(-50%, -50%);
+		}
+		.quince {
+			position: absolute;
+			top: 340px;
+			left: 720px;
+			transform: translate(-50%, -50%);
+		}
+		.trecequinceuno {
+			position: absolute;
+			top: 350px;
+			left: 435px;
+			transform: translate(-50%, -50%);
+		}
+		.dieciseis {
+			position: absolute;
+			top: 340px;
+			left: 720px;
+			transform: translate(-50%, -50%);
+		}
+		.trecedieciseisuno {
+			position: absolute;
+			top: 530px;
+			left: 745px;
+			transform: translate(-50%, -50%);
+		}
+		.diecisiete {
+			position: absolute;
+			top: 450px;
+			left: 310px;
+			transform: translate(-50%, -50%);
+		}
+		.dieciocho {
+			position: absolute;
+			top: 340px;
+			left: 720px;
+			transform: translate(-50%, -50%);
+		}
+		.diecinueve {
+			position: absolute;
+			top: 340px;
+			left: 720px;
+			transform: translate(-50%, -50%);
+		}
+		.veinte {
+			position: absolute;
+			top: 340px;
+			left: 720px;
+			transform: translate(-50%, -50%);
+		}
+		.veintiuno {
+			position: absolute;
+			top: 340px;
+			left: 720px;
+			transform: translate(-50%, -50%);
+		}
+		.veintidos {
+			position: absolute;
+			top: 340px;
+			left: 720px;
+			transform: translate(-50%, -50%);
+		}
+		.quinceveintidosuno {
+			position: absolute;
+			top: 580px;
+			left: 340px;
+			transform: translate(-50%, -50%);
+		}
+		.veintitres {
+			position: absolute;
+			top: 340px;
+			left: 720px;
+			transform: translate(-50%, -50%);
+		}
+		.tresveintitresuno {
+			position: absolute;
+			top: 260px;
+			left: 100px;
+			transform: translate(-50%, -50%);
+		}
+		.tresveintitresdos {
+			position: absolute;
+			top: 260px;
+			left: 820px;
+			transform: translate(-50%, -50%);
+		}
+		.tresveintitrestres {
+			position: absolute;
+			top: 480px;
+			left: 740px;
+			transform: translate(-50%, -50%);
+		}
+		.veinticuatro {
+			position: absolute;
+			top: 340px;
+			left: 720px;
+			transform: translate(-50%, -50%);
+		}
+		.tresveinticuatrouno {
+			position: absolute;
+			top: 550px;
+			left: 160px;
+			transform: translate(-50%, -50%);
+		}
+		.veinticincouno {
+			position: absolute;
+			top: 480px;
+			left: 720px;
+
+			transform: translate(-50%, -50%);
+		}
+		.tresveinticincouno {
+			position: absolute;
+			top: 380px;
+			left: 230px;
+			transform: translate(-50%, -50%);
+		}
+		.tresveinticincodos {
+			position: absolute;
+			top: 550px;
+			left: 380px;
+			transform: translate(-50%, -50%);
+		}
+		.tresveinticincotres {
+			position: absolute;
+			top: 300px;
+			left: 830px;
+			transform: translate(-50%, -50%);
+		}
+		.tresveinticincocuatro {
+			position: absolute;
+			top: 520px;
+			left: 680px;
+			transform: translate(-50%, -50%);
+		}
+		.cuatroveinticincouno {
+			position: absolute;
+			top: 330px;
+			left: 350px;
+			transform: translate(-50%, -50%);
+		}.cuatroveinticincodos {
+			position: absolute;
+			top: 520px;
+			left: 420px;
+			transform: translate(-50%, -50%);
+		}.cuatroveinticincotres {
+			position: absolute;
+			top: 335px;
+			left: 690px;
+			transform: translate(-50%, -50%);
+		}
+	
+
+		.veinticincodos {
+			position: absolute;
+			top: 550px;
+			left: 410px;
+			transform: translate(-50%, -50%);
+		}
+		.dosveinticincouno {
+			position: absolute;
+			top: 490px;
+			left: 670px;
+
+			transform: translate(-50%, -50%);
+		}
+
+		.dosveinticincodos {
+			position: absolute;
+			top: 510px;
+			left: 120px;
+			transform: translate(-50%, -50%);
+		}
+
+		.veintiseis {
+			position: absolute;
+			top: 300px;
+			left: 330px;
+			transform: translate(-50%, -50%);
+		}
+
+		.veintisiete {
+			position: absolute;
+			top: 290px;
+			left: 692px;
+			transform: translate(-50%, -50%);
+		}
+		.veintiocho {
+			position: absolute;
+			top: 354px;
+			left: 655px;
+			transform: translate(-50%, -50%);
+		}
+		.veintinueve {
+			position: absolute;
+			top: 278px;
+			left: 310px;
+			transform: translate(-50%, -50%);
+		}
+		.treintra {
+			position: absolute;
+			top: 430px;
+			left: 358px;
+			transform: translate(-50%, -50%);
+		}
+		.treintrayuno {
+			position: absolute;
+			top: 570px;
+			left: 370px;
+			transform: translate(-50%, -50%);
+		}
+		.treintraydosuno {
+			position: absolute;
+			top: 330px;
+			left: 710px;
+			transform: translate(-50%, -50%);
+		}
+		.treintraydosdos {
+			position: absolute;
+			top: 510px;
+			left: 700px;
+			transform: translate(-50%, -50%);
+		}
+		.treintraytres {
+			position: absolute;
+			top: 555px;
+			left: 149px;
+			transform: translate(-50%, -50%);
+		}
+		.treintraycuatro {
+			position: absolute;
+			top: 572px;
+			left: 612px;
+			transform: translate(-50%, -50%);
+		}
+		.treintraycinco {
+			position: absolute;
+			top: 510px;
+			left: 240px;
+			transform: translate(-50%, -50%);
+		}
+		.treintraysieteuno {
+			position: absolute;
+			top: 550px;
+			left: 410px;
+			transform: translate(-50%, -50%);
+		}
+		.treintraysietedos {
+			position: absolute;
+			top: 550px;
+			left: 860px;
+			transform: translate(-50%, -50%);
+		}
+		.treintrayocho {
+			position: absolute;
+			top: 190px;
+			left: 375px;
+			transform: translate(-50%, -50%);
+		}
+		.treintraynueve {
+			position: absolute;
+			top: 520px;
+			left: 572px;
+			transform: translate(-50%, -50%);
+		}
+		
+
+		/*---------------------------------------------------------------------*/
+
+		.button-left {
+			position: absolute;
+			bottom: 61%;
+
+			width: 2%;
+			padding: 10px 50px;
+			border-radius: 20px;
+			font-weight: bolder;
+			font-size: 20px;
+			background-image: url ('img/web/icono.png') no-repeat;
+
+		}
+
+		.button-right {
+			position: absolute;
+			bottom: 54%;
+
+			width: 2%;
+			padding: 10px 50px;
+			border-radius: 20px;
+			font-weight: bolder;
+			font-size: 20px;
+			background-image: url ('img/web/icono.png') no-repeat;
+
+		}
+
+		.text-home-left {
+			position: absolute;
+			top: 38%;
+			width: 20%;
+			padding: 10px 50px;
+			border-radius: 20px;
+			font-weight: bolder;
+			font-size: 14px;
+			background-image: url ('img/web/icono.png') no-repeat;
+
+		}
+
+		.text-home-right {
+			position: absolute;
+			top: 45%;
+			width: 26%;
+			padding: 10px 50px;
+			border-radius: 20px;
+			font-weight: bolder;
+			font-size: 14px;
+			background-image: url ('img/web/icono.png') no-repeat;
+
+		}
+
+		.button-open {
+			position: absolute;
+			bottom: 20px;
+			left: 30px;
+			padding: 10px 50px;
+			border-radius: 20px;
+			font-weight: bolder;
+			font-size: 20px;
+			background: linear-gradient(45deg, #e7873c, #e0eaec);
+		}
+
+		/* Estilos para ocultar el modal inicialmente */
+		.modal {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.7);
+		}
+
+		.modal-content {
+			background-color: #fff;
+			margin: 15% auto;
+			padding: 20px;
+			border: 1px solid #888;
+			width: 80%;
+			max-width: 400px;
+			position: relative;
+			border-radius: 20px;
+		}
+
+
+
+		.close {
+			position: absolute;
+			right: 10px;
+			top: 5px;
+			color: #888;
+			cursor: pointer;
+		}
+
+		/* Estilos para ocultar el modal inicialmente */
+		.modala {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.7);
+		}
+
+		.modal-contenta {
+			background-color: #fff;
+			margin: 15% auto;
+			padding: 20px;
+			border: 1px solid #888;
+			width: 80%;
+			max-width: 400px;
+			position: relative;
+			border-radius: 20px;
+		}
+
+		.closea {
+			position: absolute;
+			right: 10px;
+			top: 5px;
+			color: #888;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+
+
+	<div class="reveal">
+		<div class="slides">
+			<section data-background="img/web/fondo-lineas.png">
+				<br><br>
+				<div id="chartDiv_yvan" style="width: 980px; height: 400px;top: 120.3145px; "></div>
+			</section>
+			<section>
+				<section data-background="img/web/fisica.png">
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer; cursor:pointer;">
+							<a href="#"> <img src="img/web/back.png" height="70" width="70" title="Volver"></a>
+						</td>
+					</table>
+					<table width="100%">
+						<tr>
+							<td width="40%">
+								<div data-block-type="image"
+									style="width: 409px; height: 481px; left: 0px; top: 40.88px;">
+									<div class="sl-block-content" style="z-index: 10;"><img
+											src="img/03/aut_fisica_001.png"></div>
+								</div>
+							</td>
+							<td width="60%">
+								<figure class="highcharts-figure">
+									<div id="fis_container"
+										style="width: 659px; height: 571px; left: 100px; top: 40.88px;"></div>
+								</figure>
+							</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="index.html#/1"> <img src="img/web/back.png" height="70" width="70"
+									title="Volver"></a>
+						</td>
+					</table>
+					<div class="sl-block" data-block-type="image"
+						style="width: 960px; height: 540px; left: -2.84217e-14px; top: 80px;" data-name="image-6bcfab"
+						data-block-id="f3dda4433a8d753319fb4453524db57f">
+						<div class="sl-block-content" style="z-index: 11;"><img src="img/03/aut_fisica_002.png" class=""
+								data-natural-width="1920" data-natural-height="1080">
+							<div class="veinticincouno">
+								<button type="button" onclick='myModalc("veinticinco")'
+									style=" opacity: 0; cursor:pointer;">251</button>
+							</div>
+							<div class="veinticincodos">
+								<button type="button" onclick='myModalc("veinticinco")'
+									style=" opacity: 0; cursor:pointer;">252</button>
+							</div>
+							<div class="veintiseis">
+								<button type="button" onclick='myModalc("veintiseis")'
+									style=" opacity: 0; cursor:pointer;">26</button>
+							</div>
+							<div class="veintisiete">
+								<button type="button" onclick='myModalc("veintisiete")'
+									style=" opacity: 0; cursor:pointer;">27</button>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="index.html#/1/1"> <img src="img/web/back.png" height="70" width="70"
+									title="Volver"></a>
+						</td>
+					</table>
+					<div class="sl-block" data-block-type="image"
+						style="width: 960px; height: 540px; left: -2.84217e-14px; top: 80px;" data-name="image-6bcfab"
+						data-block-id="f3dda4433a8d753319fb4453524db57f">
+						<div class="sl-block-content" style="z-index: 11;"><img src="img/03/aut_fisica_003.png" class=""
+								data-natural-width="1920" data-natural-height="1080">
+								<div class="dosveinticincouno">
+									<button type="button" onclick='myModalc("veinticinco")'
+										style=" opacity: 0; cursor:pointer;">251</button>
+								</div>
+								<div class="dosveinticincodos">
+									<button type="button" onclick='myModalc("veinticinco")'
+										style=" opacity: 0; cursor:pointer;">252</button>
+								</div>
+								<div class="veintiocho">
+									<button type="button" onclick='myModalc("veintiocho")'
+										style=" opacity: 0; cursor:pointer;">28</button>
+								</div>
+							</div>
+					</div>
+				</section>
+				<section>
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="index.html#/1/2"> <img src="img/web/back.png" height="70" width="70"
+									title="Volver"></a>
+						</td>
+					</table>
+					<div class="sl-block" data-block-type="image"
+						style="width: 960px; height: 540px; left: -2.84217e-14px; top: 80px;" data-name="image-6bcfab"
+						data-block-id="f3dda4433a8d753319fb4453524db57f">
+						<div class="sl-block-content" style="z-index: 11;"><img src="img/03/aut_fisica_004.png" class=""
+								data-natural-width="1920" data-natural-height="1080">
+								<div class="treintraytres">
+									<button type="button" onclick='myModalc("treintraytres")'
+										style=" opacity: 0; cursor:pointer;">33</button>
+								</div>
+								<div class="treintraycuatro">
+									<button type="button" onclick='myModalc("treintraycuatro")'
+										style=" opacity: 0; cursor:pointer;">34</button>
+								</div>
+							</div>
+					</div>
+				</section>
+				<section>
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="index.html#/1/3"> <img src="img/web/back.png" height="70" width="70"
+									title="Volver"></a>
+						</td>
+					</table>
+					<div class="sl-block" data-block-type="image"
+						style="width: 960px; height: 540px; left: -2.84217e-14px; top: 80px;" data-name="image-6bcfab"
+						data-block-id="f3dda4433a8d753319fb4453524db57f">
+						<div class="sl-block-content" style="z-index: 11;"><img src="img/03/aut_fisica_005.png" class=""
+								data-natural-width="1920" data-natural-height="1080">
+								<div class="treintraycinco">
+									<button type="button" onclick='myModalc("treintraycinco")'
+										style=" opacity: 0; cursor:pointer;">35</button>
+								</div>
+							</div>
+					</div>
+				</section>
+				<section>
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="index.html#/1/4"> <img src="img/web/back.png" height="70" width="70"
+									title="Volver"></a>
+						</td>
+					</table>
+					<div class="sl-block" data-block-type="image"
+						style="width: 960px; height: 540px; left: -2.84217e-14px; top: 80px;" data-name="image-6bcfab"
+						data-block-id="f3dda4433a8d753319fb4453524db57f">
+						<div class="sl-block-content" style="z-index: 11;"><img src="img/03/aut_fisica_006.png" class=""
+								data-natural-width="1920" data-natural-height="1080">
+								<div class="veintinueve">
+									<button type="button" onclick='myModalc("veintinueve")'
+										style=" opacity: 0; cursor:pointer;">29</button>
+								</div>
+								<div class="treintra">
+									<button type="button" onclick='myModalc("treintra")'
+										style=" opacity: 0; cursor:pointer;">30</button>
+								</div>
+								<div class="treintrayuno">
+									<button type="button" onclick='myModalc("treintrayuno")'
+										style=" opacity: 0; cursor:pointer;">31</button>
+								</div>
+								<div class="treintraydosuno">
+									<button type="button" onclick='myModalc("treintraydosuno")'
+										style=" opacity: 0; cursor:pointer;">321</button>
+								</div>
+								<div class="treintraydosdos">
+									<button type="button" onclick='myModalc("treintraydosdos")'
+										style=" opacity: 0; cursor:pointer;">322</button>
+								</div>
+							</div>
+					</div>
+				</section>
+			</section>
+			<section>
+				<section data-background="img/web/economica.png">
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="#"> <img src="img/web/back.png" height="70" width="70" title="Volver"></a>
+						</td>
+					</table>
+
+					<table width="100%">
+						<tr>
+							<td width="40%">
+								<div data-block-type="image"
+									style="width: 409px; height: 481px; left: 0px; top: 40.88px;">
+									<div class="sl-block-content" style="z-index: 10;"><img
+											src="img/01/economica_001.png"></div>
+								</div>
+							</td>
+							<td width="60%">
+								<div id="container" style="width: 609px; height: 541px; left: 100px; top: 80.88px;">
+								</div>
+							</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="index.html#/2"> <img src="img/web/back.png" height="70" width="70"
+									title="Volver"></a>
+						</td>
+					</table>
+					<div class="sl-block" data-block-type="image"
+						style="width: 960px; height: 540px; left: -2.84217e-14px; top: 80px;" data-name="image-6bcfab"
+						data-block-id="f3dda4433a8d753319fb4453524db57f">
+						<div class="sl-block-content" style="z-index: 11;"><img src="img/01/economica_002.png" class=""
+								data-natural-width="1920" data-natural-height="1080">
+								<div class="uno">
+									<button type="button" onclick='myModalc("uno")'
+										style=" opacity: 0; cursor:pointer;">1</button>
+								</div>
+								<div class="dos">
+									<button type="button" onclick='myModalc("dos")'
+										style=" opacity: 0; cursor:pointer;">2</button>
+								</div>
+								<div class="tres">
+									<button type="button" onclick='myModalc("tres")'
+										style=" opacity: 0; cursor:pointer;">3</button>
+								</div>
+							</div>
+					</div>
+				</section>
+				<section>
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="index.html#/2/1"> <img src="img/web/back.png" height="70" width="70"
+									title="Volver"></a>
+						</td>
+					</table>
+					<div class="sl-block" data-block-type="image"
+						style="width: 960px; height: 540px; left: -2.84217e-14px; top: 80px;" data-name="image-6bcfab"
+						data-block-id="f3dda4433a8d753319fb4453524db57f">
+						<div class="sl-block-content" style="z-index: 11;"><img src="img/01/economica_003.png" class=""
+								data-natural-width="1920" data-natural-height="1080">
+								<div class="dostresuno">
+									<button type="button" onclick='myModalc("tres")'
+										style=" opacity: 0; cursor:pointer;">231</button>
+								</div>
+								<div class="dostresdos">
+									<button type="button" onclick='myModalc("tres")'
+										style=" opacity: 0; cursor:pointer;">232</button>
+								</div>
+								<div class="dostrestres">
+									<button type="button" onclick='myModalc("tres")'
+										style=" opacity: 0; cursor:pointer;">233</button>
+								</div>
+								<div class="dostrescuatro">
+									<button type="button" onclick='myModalc("tres")'
+										style=" opacity: 0; cursor:pointer;">234</button>
+								</div>
+							</div>
+					</div>
+				</section>
+				<section>
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="index.html#/2/2"> <img src="img/web/back.png" height="70" width="70"
+									title="Volver"></a>
+						</td>
+					</table>
+					<div class="sl-block" data-block-type="image"
+						style="width: 960px; height: 540px; left: -2.84217e-14px; top: 80px;" data-name="image-6bcfab"
+						data-block-id="f3dda4433a8d753319fb4453524db57f">
+						<div class="sl-block-content" style="z-index: 11;"><img src="img/01/economica_004.png" class=""
+								data-natural-width="1920" data-natural-height="1080">
+								<div class="trestresuno">
+									<button type="button" onclick='myModalc("tres")'
+										style=" opacity: 0; cursor:pointer;">331</button>
+								</div>
+								<div class="trestresdos">
+									<button type="button" onclick='myModalc("tres")'
+										style=" opacity: 0; cursor:pointer;">332</button>
+								</div>
+								<div class="cuatro">
+									<button type="button" onclick='myModalc("cuatro")'
+										style=" opacity: 0; cursor:pointer;">4</button>
+								</div>
+								<div class="cinco">
+									<button type="button" onclick='myModalc("cinco")'
+										style=" opacity: 0; cursor:pointer;">5</button>
+								</div>
+								<div class="seis">
+									<button type="button" onclick='myModalc("seis")'
+										style=" opacity: 0; cursor:pointer;">6</button>
+								</div>
+							</div>
+					</div>
+				</section>
+				<section>
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="index.html#/2/3"> <img src="img/web/back.png" height="70" width="70"
+									title="Volver"></a>
+						</td>
+					</table>
+					<div class="sl-block" data-block-type="image"
+						style="width: 960px; height: 540px; left: -2.84217e-14px; top: 80px;" data-name="image-6bcfab"
+						data-block-id="f3dda4433a8d753319fb4453524db57f">
+						<div class="sl-block-content" style="z-index: 11;"><img src="img/01/economica_005.png" class=""
+								data-natural-width="1920" data-natural-height="1080">
+								<div class="cuatrocinco">
+									<button type="button" onclick='myModalc("cinco")'
+										style=" opacity: 0; cursor:pointer;">5</button>
+								</div>
+								<div class="ocho">
+									<button type="button" onclick='myModalc("ocho")'
+										style=" opacity: 0; cursor:pointer;">8</button>
+								</div>
+							</div>
+					</div>
+				</section>
+				<section>
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="index.html#/2/4"> <img src="img/web/back.png" height="70" width="70"
+									title="Volver"></a>
+						</td>
+					</table>
+					<div class="sl-block" data-block-type="image"
+						style="width: 960px; height: 540px; left: -2.84217e-14px; top: 80px;" data-name="image-6bcfab"
+						data-block-id="f3dda4433a8d753319fb4453524db57f">
+						<div class="sl-block-content" style="z-index: 11;"><img src="img/01/economica_006.png" class=""
+								data-natural-width="1920" data-natural-height="1080">
+								<div class="treintraysieteuno">
+									<button type="button" onclick='myModalc("treintraysiete")'
+										style=" opacity: 0; cursor:pointer;">371</button>
+								</div>
+								<div class="treintraysietedos">
+									<button type="button" onclick='myModalc("treintraysiete")'
+										style=" opacity: 0; cursor:pointer;">372</button>
+								</div>
+							</div>
+					</div>
+				</section>
+				<section>
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="index.html#/2/5"> <img src="img/web/back.png" height="70" width="70"
+									title="Volver"></a>
+						</td>
+					</table>
+					<div class="sl-block" data-block-type="image"
+						style="width: 960px; height: 540px; left: -2.84217e-14px; top: 80px;" data-name="image-6bcfab"
+						data-block-id="f3dda4433a8d753319fb4453524db57f">
+						<div class="sl-block-content" style="z-index: 11;"><img src="img/01/economica_007.png" class=""
+								data-natural-width="1920" data-natural-height="1080">
+								<div class="treintrayocho">
+									<button type="button" onclick='myModalc("treintrayocho")'
+										style=" opacity: 0; cursor:pointer;">38</button>
+								</div>
+							</div>
+					</div>
+				</section>
+				<section>
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="index.html#/2/6"> <img src="img/web/back.png" height="70" width="70"
+									title="Volver"></a>
+						</td>
+					</table>
+					<div class="sl-block" data-block-type="image"
+						style="width: 960px; height: 540px; left: -2.84217e-14px; top: 80px;" data-name="image-6bcfab"
+						data-block-id="f3dda4433a8d753319fb4453524db57f">
+						<div class="sl-block-content" style="z-index: 11;"><img src="img/01/economica_008.png" class=""
+								data-natural-width="1920" data-natural-height="1080">
+								<div class="sietetres">
+									<button type="button" onclick='myModalc("tres")'
+										style=" opacity:  0; cursor:pointer;">73</button>
+								</div>
+							</div>
+					</div>
+				</section>
+				<section>
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="index.html#/2/7"> <img src="img/web/back.png" height="70" width="70"
+									title="Volver"></a>
+						</td>
+					</table>
+					<div class="sl-block" data-block-type="image"
+						style="width: 960px; height: 540px; left: -2.84217e-14px; top: 80px;" data-name="image-6bcfab"
+						data-block-id="f3dda4433a8d753319fb4453524db57f">
+						<div class="sl-block-content" style="z-index: 11;"><img src="img/01/economica_009.png" class=""
+								data-natural-width="1920" data-natural-height="1080">
+								<div class="diez">
+									<button type="button" onclick='myModalc("diez")'
+										style=" opacity: 0; cursor:pointer;">10</button>
+								</div>
+								<div class="onceuno">
+									<button type="button" onclick='myModalc("tres")'
+										style=" opacity: 0; cursor:pointer;">11</button>
+								</div>
+								<div class="oncedos">
+									<button type="button" onclick='myModalc("tres")'
+										style=" opacity: 0; cursor:pointer;">11</button>
+								</div>
+							</div>
+					</div>
+				</section>
+				<section>
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="index.html#/2/8"> <img src="img/web/back.png" height="70" width="70"
+									title="Volver"></a>
+						</td>
+					</table>
+					<div class="sl-block" data-block-type="image"
+						style="width: 960px; height: 540px; left: -2.84217e-14px; top: 80px;" data-name="image-6bcfab"
+						data-block-id="f3dda4433a8d753319fb4453524db57f">
+						<div class="sl-block-content" style="z-index: 11;"><img src="img/01/economica_010.png" class=""
+								data-natural-width="1920" data-natural-height="1080">
+								<div class="nuevedosuno">
+									<button type="button" onclick='myModalc("dos")'
+										style=" opacity:  0; cursor:pointer;">921</button>
+								</div>
+								<div class="nuevedosdos">
+									<button type="button" onclick='myModalc("dos")'
+										style=" opacity:  0; cursor:pointer;">922</button>
+								</div>
+								<div class="doce">
+									<button type="button" onclick='myModalc("doce")'
+										style=" opacity:  0; cursor:pointer;">12</button>
+								</div>
+							</div>
+					</div>
+				</section>
+				<section>
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="index.html#/2/9"> <img src="img/web/back.png" height="70" width="70"
+									title="Volver"></a>
+						</td>
+					</table>
+					<div class="sl-block" data-block-type="image"
+						style="width: 960px; height: 540px; left: -2.84217e-14px; top: 80px;" data-name="image-6bcfab"
+						data-block-id="f3dda4433a8d753319fb4453524db57f">
+						<div class="sl-block-content" style="z-index: 11;"><img src="img/01/economica_011.png" class=""
+								data-natural-width="1920" data-natural-height="1080">
+								<div class="dieztreceuno">
+									<button type="button" onclick='myModalc("trece")'
+										style=" opacity:  0; cursor:pointer;">131</button>
+								</div>
+								<div class="dieztrecedos">
+									<button type="button" onclick='myModalc("trece")'
+										style=" opacity:  0; cursor:pointer;">132</button>
+								</div>
+								<div class="treintraynueve">
+									<button type="button" onclick='myModalc("treintraynueve")'
+										style=" opacity:  0; cursor:pointer;">39</button>
+								</div>
+							</div>
+					</div>
+				</section>
+				<section>
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="index.html#/2/10"> <img src="img/web/back.png" height="70" width="70"
+									title="Volver"></a>
+						</td>
+					</table>
+					<div class="sl-block" data-block-type="image"
+						style="width: 960px; height: 540px; left: -2.84217e-14px; top: 80px;" data-name="image-6bcfab"
+						data-block-id="f3dda4433a8d753319fb4453524db57f">
+						<div class="sl-block-content" style="z-index: 11;"><img src="img/01/economica_012.png" class=""
+								data-natural-width="1920" data-natural-height="1080">
+								<div class="oncecincouno">
+									<button type="button" onclick='myModalc("cinco")'
+										style=" opacity:  0; cursor:pointer;">51</button>
+								</div>
+								<div class="oncecincodos">
+									<button type="button" onclick='myModalc("cinco")'
+										style=" opacity:  0; cursor:pointer;">52</button>
+								</div>
+								<div class="oncecincotres">
+									<button type="button" onclick='myModalc("cinco")'
+										style=" opacity:  0; cursor:pointer;">53</button>
+								</div>
+								<div class="oncecincocuatro">
+									<button type="button" onclick='myModalc("cinco")'
+										style=" opacity:  0; cursor:pointer;">54</button>
+								</div>
+								<div class="oncecincocinco">
+									<button type="button" onclick='myModalc("cinco")'
+										style=" opacity:  0; cursor:pointer;">55</button>
+								</div>
+							</div>
+					</div>
+				</section>
+				<section>
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="index.html#/2/11"> <img src="img/web/back.png" height="70" width="70"
+									title="Volver"></a>
+						</td>
+					</table>
+					<div class="sl-block" data-block-type="image"
+						style="width: 960px; height: 540px; left: -2.84217e-14px; top: 80px;" data-name="image-6bcfab"
+						data-block-id="f3dda4433a8d753319fb4453524db57f">
+						<div class="sl-block-content" style="z-index: 11;"><img src="img/01/economica_013.png" class=""
+								data-natural-width="1920" data-natural-height="1080">
+								<div class="docecatorceuno">
+									<button type="button" onclick='myModalc("catorce")'
+										style=" opacity:  0; cursor:pointer;">141</button>
+								</div>
+								<div class="docecatorcedos">
+									<button type="button" onclick='myModalc("catorce")'
+										style=" opacity:  0; cursor:pointer;">142</button>
+								</div>
+							</div>
+					</div>
+				</section>
+				<section>
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="index.html#/2/12"> <img src="img/web/back.png" height="70" width="70"
+									title="Volver"></a>
+						</td>
+					</table>
+					<div class="sl-block" data-block-type="image"
+						style="width: 960px; height: 540px; left: -2.84217e-14px; top: 80px;" data-name="image-6bcfab"
+						data-block-id="f3dda4433a8d753319fb4453524db57f">
+						<div class="sl-block-content" style="z-index: 11;"><img src="img/01/economica_014.png" class=""
+								data-natural-width="1920" data-natural-height="1080">
+								<div class="trecequinceuno">
+									<button type="button" onclick='myModalc("quince")'
+										style=" opacity:  0; cursor:pointer;">15</button>
+								</div>
+								<div class="trecedieciseisuno">
+									<button type="button" onclick='myModalc("dieciseis")'
+										style=" opacity:  0; cursor:pointer;">16</button>
+								</div>
+							</div>
+					</div>
+				</section>
+				<section>
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="index.html#/2/13"> <img src="img/web/back.png" height="70" width="70"
+									title="Volver"></a>
+						</td>
+					</table>
+					<div class="sl-block" data-block-type="image"
+						style="width: 960px; height: 540px; left: -2.84217e-14px; top: 80px;" data-name="image-6bcfab"
+						data-block-id="f3dda4433a8d753319fb4453524db57f">
+						<div class="sl-block-content" style="z-index: 11;"><img src="img/01/economica_015.png" class=""
+								data-natural-width="1920" data-natural-height="1080">
+								<div class="diecisiete">
+									<button type="button" onclick='myModalc("diecisiete")'
+										style=" opacity:  0; cursor:pointer;">17</button>
+								</div>
+							</div>
+					</div>
+				</section>
+				<section>
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="index.html#/2/14"> <img src="img/web/back.png" height="70" width="70"
+									title="Volver"></a>
+						</td>
+					</table>
+					<div class="sl-block" data-block-type="image"
+						style="width: 960px; height: 540px; left: -2.84217e-14px; top: 80px;" data-name="image-6bcfab"
+						data-block-id="f3dda4433a8d753319fb4453524db57f">
+						<div class="sl-block-content" style="z-index: 11;"><img src="img/01/economica_016.png" class=""
+								data-natural-width="1920" data-natural-height="1080">
+								<div class="quinceochouno">
+									<button type="button" onclick='myModalc("ocho")'
+										style=" opacity:  0; cursor:pointer;">81</button>
+								</div>
+								<div class="quinceochodos">
+									<button type="button" onclick='myModalc("ocho")'
+										style=" opacity:  0; cursor:pointer;">82</button>
+								</div>
+								<div class="quinceveintidosuno">
+									<button type="button" onclick='myModalc("veintidos")'
+										style=" opacity:  0; cursor:pointer;">221</button>
+								</div>
+							</div>
+					</div>
+				</section>
+			</section>
+
+			<section>
+				<section data-background="img/web/toma.png">
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="#"> <img src="img/web/back.png" height="70" width="70" title="Volver"></a>
+						</td>
+					</table>
+					<table align="center" width="100%">
+						<tr>
+							<td width="40%">
+								<div data-block-type="image"
+									style="width: 409px; height: 481px; left: 0px; top: 40.88px;">
+									<div class="sl-block-content" style="z-index: 10;"><img
+											src="img/02/aut_toma_de_001.png"></div>
+								</div>
+							</td>
+							<td width="60%">
+								<figure class="highcharts-figure">
+									<div id="auto_container"
+										style="width: 509px; height: 571px; left: 120px; top: 120px;"></div>
+								</figure>
+							</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="index.html#/3"> <img src="img/web/back.png" height="70" width="70"
+									title="Volver"></a>
+						</td>
+					</table>
+					<div class="sl-block" data-block-type="image"
+						style="width: 960px; height: 540px; left: -2.84217e-14px; top: 80px;" data-name="image-6bcfab"
+						data-block-id="f3dda4433a8d753319fb4453524db57f">
+						<div class="sl-block-content" style="z-index: 11;"><img src="img/02/aut_toma_de_002.png"
+								class="" data-natural-width="1920" data-natural-height="1080">
+								<div class="tresveintitresuno">
+									<button type="button" onclick='myModalc("veintitres")'
+										style=" opacity:  0; cursor:pointer;">231</button>
+								</div>
+								<div class="tresveintitresdos">
+									<button type="button" onclick='myModalc("veintitres")'
+										style=" opacity:  0; cursor:pointer;">232</button>
+								</div>
+								<div class="tresveintitrestres">
+									<button type="button" onclick='myModalc("veintitres")'
+										style=" opacity:  0; cursor:pointer;">232</button>
+								</div>
+								<div class="tresveinticuatrouno">
+									<button type="button" onclick='myModalc("veinticuatro")'
+										style=" opacity:  0; cursor:pointer;">241</button>
+								</div>
+							</div>
+					</div>
+				</section>
+				<section>
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="index.html#/3/1"> <img src="img/web/back.png" height="70" width="70"
+									title="Volver"></a>
+						</td>
+					</table>
+					<div class="sl-block" data-block-type="image"
+						style="width: 960px; height: 540px; left: -2.84217e-14px; top: 80px;" data-name="image-6bcfab"
+						data-block-id="f3dda4433a8d753319fb4453524db57f">
+						<div class="sl-block-content" style="z-index: 11;"><img src="img/02/aut_toma_de_003.png"
+								class="" data-natural-width="1920" data-natural-height="1080">
+								<div class="tresveinticincouno">
+									<button type="button" onclick='myModalc("veinticinco")'
+										style=" opacity:  0; cursor:pointer;">251</button>
+								</div>
+								<div class="tresveinticincodos">
+									<button type="button" onclick='myModalc("veinticinco")'
+										style=" opacity:  0; cursor:pointer;">252</button>
+								</div>
+								<div class="tresveinticincotres">
+									<button type="button" onclick='myModalc("veinticinco")'
+										style=" opacity:  0; cursor:pointer;">253</button>
+								</div>
+								<div class="tresveinticincocuatro">
+									<button type="button" onclick='myModalc("veinticinco")'
+										style=" opacity:  0; cursor:pointer;">254</button>
+								</div>
+							</div>
+					</div>
+				</section>
+				<section>
+					<table align="left" style="position: relative;">
+						<td>
+							<a href="#/0">
+								<div class="sl-block" data-block-type="image"
+									style="width: 72.485px; height: 68.8872px; left: 25.9888px; top: 11.1128px;"
+									data-name="image-e8b6b1" data-block-id="0d934a3d7dcb10748b0115539aff4fc2">
+									<div class="sl-block-content" style="z-index: 10;">
+										<img src="img/image.png" class="" data-natural-width="685"
+											data-natural-height="651" title="Inicio">
+									</div>
+								</div>
+							</a>
+						</td>
+						<td style=" position: absolute;
+						top: 30%;						
+						height: 80%;
+						width: 80%;
+						margin: -15% 0 0 -25%; cursor:pointer;">
+							<a href="index.html#/3/2"> <img src="img/web/back.png" height="70" width="70"
+									title="Volver"></a>
+						</td>
+					</table>
+					<div class="sl-block" data-block-type="image"
+						style="width: 960px; height: 540px; left: -2.84217e-14px; top: 80px;" data-name="image-6bcfab"
+						data-block-id="f3dda4433a8d753319fb4453524db57f">
+						<div class="sl-block-content" style="z-index: 11;"><img src="img/02/aut_toma_de_004.png"
+								class="" data-natural-width="1920" data-natural-height="1080">
+								<div class="cuatroveinticincouno">
+									<button type="button" onclick='myModalc("veinticinco")'
+										style=" opacity:  0; cursor:pointer;">251</button>
+								</div>
+								<div class="cuatroveinticincodos">
+									<button type="button" onclick='myModalc("veinticinco")'
+										style=" opacity:  0; cursor:pointer;">252</button>
+								</div>
+								<div class="cuatroveinticincotres">
+									<button type="button" onclick='myModalc("veinticinco")'
+										style=" opacity:  0; cursor:pointer;">253</button>
+								</div>
+							</div>
+					</div>
+				</section>
+
+			</section>
+
+		</div>
+	</div>
+
+	<div>
+		<button type="button" class="button-open" id="openModalButton" style="display: none;">Ver referencias</button>
+	</div>
+
+
+	<!-- Ventana modal, por defecto no visiblel -->
+	<div id="ventanaModal" class="modal">
+		<div class="modal-content">
+			<span class="cerrar">&times;</span>
+			<h2>Ventana modal</h2>
+			<p>Esto es el texto de la ventana</p>
+		</div>
+	</div>
+	<img src="img/web/icono.png" class="button-left" id="showTextLeftButton" style="left: 3%; z-index: 100; cursor: pointer;"></div>
+	<img src="/img/web/icono.png" class="button-right" id="showTextRightButton" style="right: 24%; z-index: 100;  cursor: pointer;"></div>
+	<div class="text-home-left" id="textLeft" style="left: 3%; width: 26%; display: none;">
+		Las Autonomías
+		<br></br>
+		<div style="font-weight: normal;">
+			Para lograr la igualdad de género y la autonomía de las mujeres, es preciso superar los nudos estructurales
+			de la desigualdad.
+			<br></br>
+			Se abordan 3 dimensiones de la autonomía de las mujeres: la autonomía fisica, económica y en la toma de
+			desiciones.
+			Estas tres dimensiones son independientes y requieren ser interpretadas con un enfoque interseccional,
+			intercultural, de ciclo de vida y en el marco de los derechos humanos.
+		</div>
+
+	</div>
+
+	<div class="text-home-right" id="textRight" style="right: 0%; display: none;">
+		Brechas para alcanzar las autonomías
+		<br></br>
+		<div style="font-weight: normal;">
+			Existen brechas socioeconómicas, tecnológicas, culturales, división sexual del trabajo y otras, que
+			dificultan alcanzar la autonomía de las mujeres. Al clikcear las esferas, encontrarán información sobre la
+			evidencia que tenemos sobre estas brechas.
+		</div>
+	</div>
+	<!-- Modal -->
+	<div id="myModal" class="modal" style="z-index: 1000; overflow-y: scroll;">
+		<div class="modal-content">
+			<span class="close" id="closeModalButton" style="font-size: 20px;">&times;</span>
+			<p class="c10"><span class="c3 c5">FUENTES: </span><span class="c5 c8">[ ]</span></p>
+			<p class="c6"><span class="c2"></span></p>
+			<ol class="c7 lst-kix_qg4v9jektqpm-0 start" start="1">
+				<li class="c1 li-bullet-0"><span class="c2">ASFI, 2021</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">ONU Mujeres, 2022, Inclusión Financiera de las Mujeres,
+						Bolivia</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">PNUD, Diagnóstico de programas y actividades a nivel estatal
+						y local en mejora de la autonomía económica de las mujeres, incluyendo buenas prácticas,
+						2022</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">Encuesta continua de empleo para el 2022, datos del 4to
+						trimestre 2022</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">INE, Encuesta de Hogares 2019</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">AGETIC &amp; UNFPA, Juventudes TIC., &nbsp;2019</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">Fundación Iguales, Participación de la Mujer en la Mediana y
+						Gran Empresa, 2023</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">Encuesta de hogares 2021</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">ONU Mujeres, El cuidado infantil como responsabilidad
+						estatal. Estudios de caso en las ciudades de La Paz y Santa Cruz de la Sierra, 2021,
+						Bolivia</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">IME, 2021, Perfil de la Mujer Emprendedora!</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">PRO MUJER, FAIR Center, Emprendedoras en situación de
+						Missing Middle y sus opciones de financiamiento, 2023</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">OIT, 2022, Caracterización de mujeres cuentapropistas
+						informales en Bolivia</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">GEM, 2014</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">INE, 2011-2019</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">INRA, 2019 </span></li>
+				<li class="c1 li-bullet-0"><span class="c2">Mamani, 2020</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">INE, encuesta continua de empleo para el 2022</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">We Are Social y Hootsuite, 2022, Global Overview
+						Report</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">ECM, 2022 Situación de las redes sociales en Bolivia</span>
+				</li>
+				<li class="c1 li-bullet-0"><span class="c2">El efecto de la inteligencia artificial en la vida laboral
+						de las mujeres, 2022 BID, OCDE y UNESCO</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">PNUD, Por un mundo digital y tecnológico con las mujeres,
+						2023</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">PNUD, 2022, Informe sobre Desarrollo Humano 2021-2022</span>
+				</li>
+				<li class="c1 li-bullet-0"><span class="c2">Fundación iguales, 2023, participación de la mujer en la
+						mediana y gran empresa</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">TEA WEEB - CECI 2022., Estudio de línea base para el
+						proyecto enfoque transformativo en gënero para el empoderamiento económico de las mujeres en
+						bolivia</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">Coordinadora de la Mujer, OBSERVATORIO DE GÉNERO,
+						2023</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">INE, Encuesta de Prevalencia y Características de la
+						Violencia contra las Mujeres (EPCVcM) 2016</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">LA RAZÓN DIGITAL, 2022 </span></li>
+				<li class="c1 li-bullet-0"><span class="c2">UNFPA, 2023, Documento orientativo para informar sobre la
+						violencia digital: Guía práctica de referencia para periodistas y medios de comunicación</span>
+				</li>
+				<li class="c1 li-bullet-0"><span class="c2">OBSERVATORIO IGUALDAD DE GÉNERO CEPAL, 2016, &nbsp;INDICADOR
+						DE AUTONOMÍA FÍSICA: DEMANDA INSATISFECHA DE PLANIFICACiÓN FAMILIAR)</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">Save The Children, 2022, Análisis de brechas normativas y
+						sociales para abordar los matrimonios y uniones infantiles tempranos y forzados</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">Estudio Nacional de Mortalidad Materna 2011., MINISTERIO DE
+						SALUD</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">OPS 2023, PERFIL DE PAÍS BOLIVIA</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">El estado del periodismo de opinión en La Razón y Página
+						Siete, RODRIGO FERNANDEZ, 2017</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">OXFAM, 2020, TIEMPO PARA CUIDAR</span></li>
+				<li class="c1 li-bullet-0"><span class="c3">Coordinadora de la mujer, la SITUACIÓN DE LAS MUJERES EN
+						BOLIVIA: encuesta nacional de discriminación y eclusión social 2014</span></li>
+				<li class="c1 li-bullet-0"><span class="c3">Fiscalía</span><span class="c2">&nbsp;General del Estado en
+						2022 (2022) </span></li>
+				<li class="c1 li-bullet-0"><span class="c2">OXFAM 2019</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">Flavia Marco 2023</span></li>
+				<li class="c1 li-bullet-0"><span class="c2">FAIR, CENTER &amp; Pro Mujer, 2022, Emprendedoras en
+						situación de Missing Middle y sus opciones de financiamiento, 2022</span></li>
+			</ol>
+			<p class="c0"><span class="c2"></span></p>
+		</div>
+	</div>
+
+	<div id="myModala" class="modal" style="z-index: 1000; overflow-y: scroll;">
+		<div class="modal-content">
+			<span class="closea" id="closeModalButtona" style="font-size: 20px;">&times;</span>
+			<p class="c10"><span class="c3 c5">FUENTE: </span><span class="c5 c8">[ ]</span></p>
+			<p class="c6"><span class="c2"></span></p>
+			<ol class="c7 lst-kix_qg4v9jektqpm-0 start" start="1">
+				<p id="demo"></p>
+
+			</ol>
+			<p class="c0"><span class="c2"></span></p>
+		</div>
+	</div>
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/zoom/zoom.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/search/search.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			center: true,
+			hash: true,
+			minScale: 0,
+			maxScale: 1,
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
+		});
+
+		// define sets and set set intersections
+
+		var chartddsds = JSC.chart('chartDiv_yvan', {
+			debug: false,
+			type: 'venn',
+			//palette: 'fiveColor40',
+			defaultSeries_mouseTracking_enabled: true,
+			defaultPoint: {
+				opacity: 1,
+				tooltip: '<span style="font-size:14px;">',
+				label: {
+					color: 'white',
+					autoHide: true,
+					autoWrap: true,
+					text: '%icon<br>%name'
+				}
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: true
+						}
+					}]
+				}
+			},
+			defaultPoint_events_click: function () {
+				console.log(this.name);
+				if (this.name == '<b>Autonomía <br> económica</b>') {
+					window.location = "#/2";
+				}
+				if (this.name == '<b>Autonomía <br> Física</b>') {
+					window.location = "#/1";
+				}
+				if (this.name == '<b>Autonomía <br>en la toma de<br> decisiones</b>') {
+					window.location = "#/3";
+				}
+			},
+			series: [
+				{
+					points: [
+						{
+							name: '<b>Autonomía <br> Física</b>',
+							sets: ['A'],
+							value: 2,
+							y: 5,
+							color: "#11ce7e",
+							attributes_icon: '<img src=img/web/mujer.svg width="60" height="60">',
+							label: {
+								color: '#000000'
+							}
+
+						}, {
+							name: '<b>Autonomía <br>en la toma de<br> decisiones</b>',
+							sets: ['B'],
+							y: 5,
+							value: 2,
+							color: "#b780d1",
+							attributes_icon: '<img src=img/web/mujer2.svg width="60" height="60">',
+							label: {
+								color: '#000000'
+							}
+						}, {
+							name: '<b>Autonomía <br> económica</b>',
+							sets: ['C'],
+							y: 5,
+							value: 2,
+							color: "#ff4522",
+							attributes_icon: '<img src=img/web/money.svg width="60" height="60">',
+							label: {
+								color: '#FFFFFF'
+							}
+						}, {
+							name: '',
+							sets: ['A', 'B'],
+							y: 2,
+							value: 1,
+						}, {
+							name: '',
+							sets: ['A', 'C'],
+							y: 2,
+							value: 1,
+						}, {
+							name: '',
+							sets: ['B', 'C'],
+							y: 2,
+							value: 1,
+						}, {
+							name: '<b>Autonomía <br>de las <br> mujeres</b>',
+							sets: ['A', 'B', 'C'],
+							y: 1,
+							value: 1,
+						}
+					]
+				}
+			], responsive: {
+				rules: [{
+					condition: {
+						maxWidth: 650
+					},
+					chartOptions: {
+						plotOptions: {
+							venn: {
+								dataLabels: {
+									style: {
+										fontSize: '14px',
+										width: '100px'
+									}
+								}
+							}
+						}
+					}
+				}]
+			}
+		});
+		
+		Highcharts.chart('container', {
+			chart: {
+				type: 'packedbubble',
+				//height: '100%',
+				panning: false,
+				marginTop: 50,
+				zoomType: 'none',
+
+			},
+			title: {
+				text: '',
+				align: 'left'
+			},
+			tooltip: {
+				useHTML: false,
+				pointFormat: '<b>{point.name}</b>',
+				enabled: true
+			},
+			plotOptions: {
+				packedbubble: {
+					minSize: '64%',
+					maxSize: '64%',
+					zMin: 400,
+					zMax: 1000,
+					cursor: 'pointer',
+					//color: 'rgba(255, 36, 27, 1)',
+					//colorByPoint: true,
+					events: {
+						click: function (event) {
+							console.log(event.point);
+							console.log(event.point.valor);
+							if (event.point.valor == '1') {
+								window.location = "#/2/1";
+							}
+							if (event.point.valor == '2') {
+								window.location = "#/2/14";
+							}
+							//if(event.point.valor == '3'){
+							//	window.location ="#/2/1"; 
+							//}
+							if (event.point.valor == '4') {
+								window.location = "#/2/2";
+							}
+							if (event.point.valor == '5') {
+								window.location = "#/2/8";
+							}
+							if (event.point.valor == '6') {
+								window.location = "#/2/13";
+							}
+							if (event.point.valor == '7') {
+								window.location = "#/2/3";
+							}
+							if (event.point.valor == '8') {
+								window.location = "#/2/4";
+							}
+							if (event.point.valor == '9') {
+								window.location = "#/2/8";
+							}
+							if (event.point.valor == '10') {
+								window.location = "#/2/15";
+							}
+							if (event.point.valor == '11') {
+								window.location = "#/2/5";
+							}
+							if (event.point.valor == '12') {
+								window.location = "#/2/11";
+							}
+
+						}
+					},
+					tooltip: {
+						enabled: false // Disable tooltip on hover
+					},
+					states: {
+						hover: {
+							enabled: false // Disable hover state
+						}
+					},
+					animation: {
+						duration: 0 // Disable animation
+					},
+					animation: true, // Disable all mouse actions
+					layoutAlgorithm: {
+						//gravitationalConstant: 0.04,
+						splitSeries: true,
+						seriesInteraction: false,
+						dragBetweenSeries: true,
+						parentNodeLimit: true
+					},
+					dataLabels: {
+						enabled: true,
+						shadow: false,
+						overflow: 'none',
+						format: '{point.name}',
+						color: '#000000',
+						textAlign: 'center',
+						//color: 'black',
+						style: {
+							color: '#000000',
+							textOutline: 'none',
+							fontWeight: 'normal',
+							fontSize: '10.5px',
+							textAlign: 'center'
+						}
+					}
+				}
+			},
+			series: [
+				{
+					name: ' ',
+					//fillColor: 'rgba(255, 36, 27, 1)',
+					//color:"#ff4522", 
+					//lineColor: '#ff4522',
+					color: 'rgb(255, 69, 34, 1)',
+					//lineWidth: 0.2,
+					colorIndex: 0,
+					marker: {
+						//fillColor: '#FAAC58',
+						//lineWidth:3,
+						fillOpacity: 2,
+						//color: 'rgba(255, 36, 25, 1)',
+						//lineColor: '#ff4522' // inherit from series  ff4522
+					},
+					data: [
+						{ name: 'ACCESO A <br/>CRÉDITOS', valor: 1, value: 750, color: 'rgba(255, 139, 60, 1)' },
+						{ name: '&nbsp;&nbsp;&nbsp;&nbsp; ACCESO <br/>&nbsp;&nbsp;&nbsp; Y USO DE <br/>TECNOLOGIAS', valor: 2, value: 750, color: 'rgba(255, 139, 60, 1)' },
+						{ name: '&nbsp; POLÍTICAS A <br/>FAVOR DE LAS <br/>&nbsp;&nbsp;&nbsp;&nbsp; MUJERES', valor: 4, value: 750, color: 'rgba(255, 139, 60, 1)' },
+						{ name: '&nbsp;&nbsp;&nbsp; MUJERES <br/>EMPRESARIAS', valor: 5, value: 750, color: 'rgba(255, 139, 60, 1)' },
+						{ name: '&nbsp; ACCESO A <br/>PROPIEDAD', valor: 6, value: 750, color: 'rgba(255, 139, 60, 1)' },
+						{ name: 'PARTICIPACIÓN <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LABORAL', valor: 7, value: 750, color: 'rgba(255, 139, 60, 1)' },
+						{ name: 'INGRESOS', valor: 8, value: 750, color: 'rgba(255, 139, 60, 1)' },
+						{ name: 'MUJERES <br/>&nbsp;EMPREN</br>DEDORAS', valor: 9, value: 750, color: 'rgba(255, 139, 60, 1)' },
+						{ name: 'NIVELES DE <br/>&nbsp;&nbsp;POBREZA', valor: 10, value: 750, color: 'rgba(255, 139, 60, 1)' },
+						{ name: '&nbsp;&nbsp; USO DEL <br/>&nbsp;&nbsp;  TIEMPO Y<br/> LABORES DE<br/>&nbsp;&nbsp; CUIDADO', valor: 11, value: 750, color: 'rgba(255, 139, 60, 1)' },
+						{ name: '&nbsp;&nbsp; ACCESO A<br/>SEGURIDAD Y<br/>&nbsp; BENEFICIOS<br/>&nbsp;&nbsp;&nbsp; SOCIALES', valor: 12, value: 750, color: 'rgba(255, 139, 60, 1)' }
+					]
+				}]
+		});
+
+		Highcharts.chart('fis_container', {
+			chart: {
+				type: 'packedbubble',
+				height: '100%',
+				panning: false,
+				zoomType: 'none',
+			},
+			title: {
+				text: ''
+			},
+			tooltip: {
+				useHTML: false,
+				pointFormat: '<b>{point.name}</b>',
+				enabled: true
+			},
+			plotOptions: {
+				packedbubble: {
+					minSize: '20%',
+					maxSize: '80%',
+					zMin: 400,
+					zMax: 1000,
+					cursor: 'pointer',
+					events: {
+						click: function (event) {
+							console.log(event.point);
+							if (event.point.data == '1') {
+								window.location = "#/1/1";
+							}
+							if (event.point.data == '3') {
+								window.location = "#/1/3";
+							}
+							if (event.point.data == '2') {
+								window.location = "#/1/5";
+							}
+						}
+					},
+					tooltip: {
+						enabled: false // Disable tooltip on hover
+					},
+					states: {
+						hover: {
+							enabled: false // Disable hover state
+						}
+					},
+					animation: {
+						duration: 0 // Disable animation
+					},
+					animation: true,
+					layoutAlgorithm: {
+						//gravitationalConstant: 0.04,
+						splitSeries: true,
+						seriesInteraction: false,
+						dragBetweenSeries: true,
+						parentNodeLimit: true
+					},
+
+					dataLabels: {
+						align: 'center',
+						enabled: true,
+						shadow: false,
+						textAlign: 'center',
+						overflow: 'none',
+						format: '{point.name}',
+						style: {
+							color: '#FFFFFF',
+							textOutline: 'none',
+							fontWeight: 'normal',
+							align: 'center',
+							fontSize: '12px'
+						}
+					}
+				}
+			},
+			series: [
+				{
+					name: ' ',
+					//color:"#417660", 
+					//color: 'rgb(0, 124, 89, 1)',
+					color: 'rgb(0, 207, 122, 1)',
+					colorIndex: 0,
+					marker: {
+						//fillColor: 'red',
+						//lineWidth: 4,
+						fillOpacity: 2,
+						//lineColor: '#417660' // inherit from series 
+					},
+					data: [
+						{ name: 'PRÁCTICAS <br>&nbsp;NOCIVAS Y <br>&nbsp;VIOLENCIA', data: 1, value: 500, color: 'rgb(0, 124, 89, 1)', dataLabels: { align: 'center', verticalAlign: 'middle' }, z: 50 },
+						{ name: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  VULNERACIÓN <br>DERECHOS SEXUALES  <br>&nbsp;&nbsp;&nbsp; Y REPRODUCTIVOS', data: 2, value: 500, color: 'rgb(0, 124, 89, 1)', dataLabels: { align: 'center', verticalAlign: 'middle' }, z: 50 },
+						{ name: 'DISCRIMINACIÓN ', data: 3, value: 500, color: 'rgb(0, 124, 89, 1)', dataLabels: { align: 'center', verticalAlign: 'middle' }, z: 100 }
+					]
+				}]
+		});
+
+		Highcharts.chart('auto_container', {
+			chart: {
+				type: 'packedbubble',
+				height: '100%',
+				panning: false,
+				zoomType: 'none',
+			},
+			title: {
+				text: '',
+				align: 'left'
+			},
+			tooltip: {
+				useHTML: false,
+				pointFormat: '<b>{point.name}</b>',
+				enabled: true
+			},
+			plotOptions: {
+				packedbubble: {
+					minSize: '63%',
+					maxSize: '63%',
+					zMin: 0,
+					zMax: 1000,
+					cursor: 'pointer',
+					events: {
+						click: function (event) {
+							console.log(event.point);
+							if (event.point.data == '1') {
+								window.location = "#/3/1";
+							}
+							if (event.point.data == '2') {
+								window.location = "#/3/2";
+							}
+						}
+					},
+					tooltip: {
+						enabled: false // Disable tooltip on hover
+					},
+					states: {
+						hover: {
+							enabled: false // Disable hover state
+						}
+					},
+					animation: {
+						duration: 0 // Disable animation
+					},
+					animation: true,
+					layoutAlgorithm: {
+						//gravitationalConstant: 0.04,
+						splitSeries: true,
+						seriesInteraction: true,
+						dragBetweenSeries: true,
+						parentNodeLimit: true
+					},
+
+					dataLabels: {
+						align: 'center',
+						enabled: true,
+						shadow: false,
+						textAlign: 'center',
+						overflow: 'none',
+						format: '{point.name}',
+						style: {
+							color: '#FFFFFF',
+							textOutline: 'none',
+							fontWeight: 'normal',
+							align: 'center',
+							fontSize: '15px'
+						}
+					}
+				}
+			},
+			series: [
+				{
+					name: ' ',
+					//color:"#b780d3", 
+					color: 'rgb(183, 128, 211, 1)',
+					colorIndex: 0,
+					marker: {
+						//fillColor: 'red',
+						//lineWidth: 4,
+						fillOpacity: 2,
+						//lineColor: '#b780d3' // inherit from series  96519e
+					},
+					data: [
+						{ name: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ÁMBITO <br>EMPRESARIAL', data: 1, value: 550, color: 'rgb(150, 81, 158, 1)' },
+						{ name: '&nbsp; ÁMBITO <br>POLÍTICO', data: 2, value: 550, color: 'rgb(150, 81, 158, 1)' }
+					]
+				}]
+		});
+
+		// Obtén una referencia al botón y al modal
+		var openModalButton = document.getElementById("openModalButton");
+		var closeModalButton = document.getElementById("closeModalButton");
+		var openModalButtona = document.getElementById("openModalButtona");
+		var closeModalButtona = document.getElementById("closeModalButtona");
+		var modal = document.getElementById("myModal");
+		var modala = document.getElementById("myModala");
+		var leftText = document.getElementById("textLeft");
+		var rightText = document.getElementById("textRight");
+
+		var openCloseLeftButton = document.getElementById("showTextLeftButton");
+		var openCloseRightButton = document.getElementById("showTextRightButton");
+		openCloseLeftButton.addEventListener("click", function () {
+			if (leftText.style.display == 'none') {
+				leftText.style.display = "block";
+			} else {
+				leftText.style.display = "none";
+			}
+
+		});
+		openCloseRightButton.addEventListener("click", function () {
+			if (rightText.style.display == 'none') {
+				rightText.style.display = "block";
+			} else {
+				rightText.style.display = "none";
+			}
+		});
+
+
+		Reveal.addEventListener('slidechanged', function (event) {
+
+			leftText.style.display = "none";
+			rightText.style.display = "none";
+			if (event.indexh == 0) {
+				openCloseRightButton.style.display = "block";
+				openCloseLeftButton.style.display = "block";
+				document.getElementById("openModalButton").style.display = "none";
+			} else {
+				openCloseRightButton.style.display = "none";
+				openCloseLeftButton.style.display = "none";
+				document.getElementById("openModalButton").style.display = "block";
+			}
+		});
+
+
+
+		// Agrega un evento al botón para abrir el modal
+		openModalButton.addEventListener("click", function () {
+			modal.style.display = "block";
+
+		});
+
+		// Agrega un evento al botón de cierre para cerrar el modal
+		closeModalButton.addEventListener("click", function () {
+			modal.style.display = "none";
+		});
+
+		closeModalButtona.addEventListener("click", function () {
+			modala.style.display = "none";
+		});
+
+		// Cierra el modal si se hace clic fuera del contenido del modal
+		window.addEventListener("click", function (event) {
+			if (event.target === modal) {
+				modal.style.display = "none";
+			}
+		});
+
+		// Agrega un evento al botón para abrir el modal
+
+
+		// Agrega un evento al botón de cierre para cerrar el modal
+		openModalButton.addEventListener("click", function () {
+			modala.style.display = "none";
+		});
+
+		// Cierra el modal si se hace clic fuera del contenido del modal
+		window.addEventListener("click", function (event) {
+			if (event.target === modala) {
+				modala.style.display = "none";
+			}
+		});
+
+		/////////////////////////////////
+		function myModalc(myParams) {
+			modala.style.display = "block";
+			console.log(myParams);
+			if (myParams == 'uno') {
+				document.getElementById("demo").innerHTML = "ASFI (2021)";
+			}
+			if (myParams == 'dos') {
+				document.getElementById("demo").innerHTML = "ONU Mujeres (2022). Inclusión Financiera de las Mujeres, Bolivia";
+			}
+			if (myParams == 'tres') {
+				document.getElementById("demo").innerHTML = "PNUD (2022), Diagnóstico de programas y actividades a nivel estatal y local en mejora de la autonomía económica de las mujeres, incluyendo buenas prácticas";
+			}
+			if (myParams == 'cuatro') {
+				document.getElementById("demo").innerHTML = "INE (2022). Encuesta continua de empleo, datos del 4to";
+			}
+			if (myParams == 'cinco') {
+				document.getElementById("demo").innerHTML = "INE (2019). Encuesta de Hogares";
+			}
+			if (myParams == 'seis') {
+				document.getElementById("demo").innerHTML = "AGETIC & UNFPA (2019). Juventudes TIC";
+			}
+			if (myParams == 'siete') {
+				document.getElementById("demo").innerHTML = "Fundación Iguales (2023). Participación de la Mujer en la Mediana y Gran Empresa";
+			}
+			if (myParams == 'ocho') {
+				document.getElementById("demo").innerHTML = "INE (2021). Encuesta de hogares";
+			}
+			if (myParams == 'nueve') {
+				document.getElementById("demo").innerHTML = "ONU Mujeres (2021). El cuidado infantil como responsabilidad estatal. Estudios de caso en las ciudades de La Paz y Santa Cruz de la Sierra, 2021";
+			}
+			if (myParams == 'diez') {
+				document.getElementById("demo").innerHTML = "IME (2021). Perfil de la Mujer Emprendedora";
+			}
+			if (myParams == 'once') {
+				document.getElementById("demo").innerHTML = "PRO MUJER, FAIR Center (2023). Emprendedoras en situación de Missing Middle y sus opciones de financiamiento";
+			}
+			if (myParams == 'doce') {
+				document.getElementById("demo").innerHTML = "OIT (2022). Caracterización de mujeres cuentapropistas informales en Bolivia";
+			}
+			if (myParams == 'trece') {
+				document.getElementById("demo").innerHTML = "GEM (2014)";
+			}
+			if (myParams == 'catorce') {
+				document.getElementById("demo").innerHTML = "INE (2011-2019)";
+			}
+			if (myParams == 'quince') {
+				document.getElementById("demo").innerHTML = "INRA (2019)";
+			}
+			if (myParams == 'dieciseis') {
+				document.getElementById("demo").innerHTML = "Mamani (2020)";
+			}
+			if (myParams == 'diecisiete') {
+				document.getElementById("demo").innerHTML = "INE (2022). Encuesta continua de empleo";
+			}
+			if (myParams == 'dieciocho') {
+				document.getElementById("demo").innerHTML = "We Are Social y Hootsuite (2022). Global Overview Report";
+			}
+			if (myParams == 'diecinueve') {
+				document.getElementById("demo").innerHTML = "ECM (2022). Situación de las redes sociales en Bolivia";
+			}
+			if (myParams == 'veinte') {
+				document.getElementById("demo").innerHTML = "BID, OCDE y UNESCO (2022). El efecto de la inteligencia artificial en la vida laboral de las mujeres";
+			}
+			if (myParams == 'veintiuno') {
+				document.getElementById("demo").innerHTML = "PNUD (2023). Por un mundo digital y tecnológico con las mujeres";
+			}
+			if (myParams == 'veintidos') {
+				document.getElementById("demo").innerHTML = "PNUD (2022). Informe sobre Desarrollo Humano 2021-2022";
+			}
+			if (myParams == 'veintitres') {
+				document.getElementById("demo").innerHTML = "Fundación Iguales (2023). Participación de la mujer en la mediana y gran empresa";
+			}
+			if (myParams == 'veinticuatro') {
+				document.getElementById("demo").innerHTML = "TEA WEEB – CECI (2022). Estudio de línea base para el proyecto enfoque transformativo en género para el empoderamiento económico de las mujeres en Bolivia";
+			}
+			if (myParams == 'veinticinco') {
+				document.getElementById("demo").innerHTML = "Coordinadora de la Mujer (2023). Observatorio de género";
+			}4
+			if (myParams == 'veintiseis') {
+				document.getElementById("demo").innerHTML = "INE (2016), Encuesta de Prevalencia y Características de la Violencia contra las Mujeres (EPCVcM)";
+			}
+			if (myParams == 'veintisiete') {
+				document.getElementById("demo").innerHTML = "La Razón Digital (2022)";
+			}
+			if (myParams == 'veintiocho') {
+				document.getElementById("demo").innerHTML = "UNFPA (2023). Documento orientativo para informar sobre la violencia digital: Guía práctica de referencia para periodistas y medios de comunicación";
+			}
+			if (myParams == 'veintinueve') {
+				document.getElementById("demo").innerHTML = "CEPAL (2016). Observatorio de Igualdad de Género";
+			}
+			if (myParams == 'treintra') {
+				document.getElementById("demo").innerHTML = "Save The Children (2022). Análisis de brechas normativas y sociales para abordar los matrimonios y uniones infantiles tempranos y forzados";
+			}
+			if (myParams == 'treintrayuno') {
+				document.getElementById("demo").innerHTML = "Ministerio de Salud. Estudio Nacional de Mortalidad Materna (2011)";
+			}
+			if (myParams == 'treintraydos') {
+				document.getElementById("demo").innerHTML = "OPS (2023). Perfil de País Bolivia";
+			}
+			if (myParams == 'treintraytres') {
+				document.getElementById("demo").innerHTML = "Rodrigo Fernández (2017). El estado del periodismo de opinión en La Razón y Página Siete";
+			}
+			if (myParams == 'treintraycuatro') {
+				document.getElementById("demo").innerHTML = "OXFAM (2020). Tiempo para cuidar";
+			}
+			if (myParams == 'treintraycinco') {
+				document.getElementById("demo").innerHTML = "Coordinadora de la Mujer (2014). La situación de las mujeres en Bolivia: encuesta nacional de discriminación y exclusión social";
+			}
+			if (myParams == 'treintraysiete') {
+				document.getElementById("demo").innerHTML = "OXFAM (2019)";
+			}
+			if (myParams == 'treintrayocho') {
+				document.getElementById("demo").innerHTML = "Flavia Marco (2023)";
+			}
+			if (myParams == 'treintraynueve') {
+				document.getElementById("demo").innerHTML = "FAIR, CENTER & Pro Mujer (2022). Emprendedoras en situación de Missing Middle y sus opciones de financiamiento";
+			}
+
+
+		}
+		var modalc = document.getElementById('myModalc');
+	</script>
+</body>
+
+</html>
